@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JavaScript</title>
+</head>
+<body>
+    <h1>Ejercicios Logica de Programacion</h1>
+    
+    <h2>Ejercicio 1</h2>
+    
+    <p> programa una función que cuente el numero de caracateres
+    que tiene una cadena de texto, pe. mi_funcion("Hola Mundo") devolverá 10.</p>
+     
+    <script>
+
+         contarCaracteres("Hola Mundo");
+          function contarCaracteres(cadena){
+          let numeroCaracteres = cadena.length;
+          console.log(numeroCaracteres);
+          }   
+     </script>       
+      
+  
+     
+    <h2>Ejercicio 2</h2>
+    <p> programa una función que te devuelva el reverso de una cadena, pe. mi_funcion("Hola Mundo") devolverá </p>
+     <script>
+            let cadena = "Hola Mundo";
+            let cadenaReverso = cadena.split("").reverse().join("");
+            console.log(cadenaReverso);
+     </script>
+    
+    <h2>Ejercicio 3</h2>
+    <p> programa una función que dada una cadena de texto y una posición, devuelva el caracter
+    pe. mi_funcion("Hola Mundo")   
+    </p>
+    
+    <script>
+        findChar("Hola Mundo",6);
+        function findChar(cadena,posicion){
+            let caracter = cadena.charAt(posicion);
+            console.log(caracter);
+        }
+        
+    </script>
+
+    <h2>Ejercicio 4</h2>
+    <p> programa una función que te devuelva una cadena con la primera letra en mayúscula,
+     pe. mi_funcion("hoy es martes") devolverá Hoy es martes</p>
+
+    <script>   
+         upperCase("hoy es martes");
+            function upperCase(cadena){
+                let cadenaMayuscula = cadena.charAt(0).toUpperCase() + cadena.slice(1);
+                console.log(cadenaMayuscula);
+            }
+
+    </script>
+
+    <h2>Ejercicio 5</h2>
+    <p> programa una funcion que te devuelva true o false si una cadena tiene o no mayusculas,
+    pe. mi_funcion("Hoy es martes") devolverá true </p>
+    
+    <script>
+         stringMayuscula("Hoy es martes");
+            function stringMayuscula(cadena){
+                let mayuscula = cadena.toUpperCase();
+                if(cadena == mayuscula){
+                    console.log(true);
+                }else{
+                    console.log(false);
+                }
+            }
+    </script>
+
+    <h2>Ejercicio 6</h2>
+    <p> programa una función que te devuelva el texto recortado según el número
+    de caracteres indicados, pe. mi_funcion("Hola Mundo",4) devolverá Hola</p> 
+
+    <script>
+        recortarTexto("Hola Mundo",4);
+            function recortarTexto(cadena,numeroCaracteres){
+                let textoRecortado = cadena.substring(0,numeroCaracteres);
+                console.log(textoRecortado);
+            }
+    </script>
+
+    <h2>Ejercicio 7</h2>
+    <p>  programa una funcion que dada un string te devuelva un array de  textos 
+        separados por cierto caracter,pe. mi_funcion("hola que tal", " ") devolverá ["hola", "que", "tal"]</p>
+
+    <script>
+         let str=("hola que tal, que bien");
+            let separador = " ";
+            let array = str.split(separador);
+            console.log(array);
+    </script>
+
+    <h2>Ejercicio 8</h2>
+    <p>  programa una funcion que repeta un texto X veces, pe. mi_funcion("Hola", 3) devolverá HolaHolaHola</p>
+    <script>
+        repetirTexto("Hola",3);
+            function repetirTexto(cadena,numeroRepeticiones){
+                let textoRepetido = cadena.repeat(numeroRepeticiones);
+                console.log(textoRepetido);
+            }
+    </script>
+
+    <h2>Ejercicio 9</h2>
+    <p> programa un objeto que permita manejar la siguiente información de una persona: nombre, apellido, edad, dirección, teléfono y fecha de nacimiento. 
+    </p>
+    se debe crear una funcion que permita agregar una nueva persona al objeto.
+    <script>
+        let persona = {
+            nombre: "",
+            apellido: "",
+            edad: "",
+            direccion: "",
+            telefono: "",
+            fechaNacimiento: "",
+            agregarPersona: function(nombre,apellido,edad,direccion,telefono,fechaNacimiento){
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.edad = edad;
+                this.direccion = direccion;
+                this.telefono = telefono;
+                this.fechaNacimiento = fechaNacimiento;
+            }
+        }
+        persona.agregarPersona("Juan","Perez",23,"Calle 123","123456789","12/12/12");
+        console.log(persona);
+    </script>
+
+    
+  
+
+             
+      
+
+       
+     
+</body>
+</html>
